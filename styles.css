@@ -466,6 +466,15 @@ MOBILE MEDIA QUERY V*/
         font-size: 128px;
         color: white;
     }
+
+    .hero-text h2 {
+        display: contents;
+        font-size: 3rem;
+        padding: 20px;
+        font-style: oblique;
+        padding-bottom: 60px;
+        color: black;
+    }
 }
 
 @media (max-width: 1878px) {
