@@ -162,7 +162,7 @@ nav ul li a:hover::after {
 }
 
 .hero-text p {
-    font-size: 22px;
+    font-size: 24px;
 }
 
 .hero-text p a {
@@ -426,6 +426,7 @@ MOBILE MEDIA QUERY V*/
 
     .intro {
         padding: 2% 0;
+        height: 65vh;
     }
 
     .intro-box {
@@ -500,10 +501,6 @@ MOBILE MEDIA QUERY V*/
 
     .hero-text p {
         font-size: 14px;
-    }
-
-    .intro-box {
-        width: 80%;
     }
 
     .showcase-text p {
