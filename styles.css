@@ -113,9 +113,9 @@ nav ul li a:hover::after {
     flex: 0 0 50%;
     position: relative;
     height: 100%;
-    background: url(images/cjnesbitiv_flip.jpeg) no-repeat center center/cover;
+    background: url(images/cjnesbitprofessional.png) no-repeat center center/cover;
     background-size: cover;
-    background-position: center center;
+    background-position: center 30%;
 }
 
 .hero-temp {
