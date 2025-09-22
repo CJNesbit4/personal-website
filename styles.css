@@ -524,8 +524,8 @@ MOBILE MEDIA QUERY V*/
     }
 
     .hero-text p {
-        font-size: 10px;
-        line-height: 1.5;
+        font-size: 16px;
+        line-height: 1.0;
     }
 
     .intro-text p {
@@ -559,8 +559,8 @@ MOBILE MEDIA QUERY V*/
     }
 
     .hero-text p {
-        font-size: 9px;
-        line-height: 1.2;
+        font-size: 16px;
+        line-height: 1.0;
     }
 }
 
