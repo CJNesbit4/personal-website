@@ -1,0 +1,141 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+body, html {
+    margin: 0;
+    background-color: #0B2031;
+}
+
+.title {
+    color: #ACE5FF;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 800;
+    margin: 2rem 0;
+}
+
+.subtitle {
+    color: #E9FFDB;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 1rem 15%;
+}
+
+.app-section {
+    width: 50%;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+.app-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.app-box {
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+    text-decoration: none;
+}
+
+.app-box:hover {
+    transform: translateY(-5px);
+}
+
+.app-image {
+    width: 100%;
+      aspect-ratio: 16 / 9;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      background-color: #ddd;
+}
+
+.app-title {
+    font-size: 1.25rem;
+      font-weight: 600;
+      text-align: center;
+      color: #ffffff;
+      margin: 0;
+}
+
+
+
+
+
+
+
+
+nav { /* navigation bar */
+    width: 100%;
+    height: 100px;
+    background: #ACE5FF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    position: sticky; top: 0;
+    z-index: 20;
+    overflow: hidden;
+}
+
+nav ul { /* unordered list class for the options */
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+nav ul li { /* nav -> unordered list class -> list item class */
+    margin-right: 20px; /* Margin right from eachother */
+}
+
+nav ul li a { /* nav -> unordered list class -> list item class -> a class */
+    position: relative;
+    text-decoration: none;
+    color: rgb(0, 0, 0); /* text color */
+    font-size: 18px; /* text font size (duh) */
+    padding: 10px; /* padding on ALL direction */
+    display: inline-block;
+    transition: color 0.3s ease, border-bottom 0.3s ease; /* transition underline duration */
+}
+
+nav ul li a::after {
+    content: ""; /* empty class */
+    background-color:#ff0000; /* color of underline */
+    transition: width 0.3s ease; /* span of transition (width) */
+    height: 4px; /* height of underline */
+    width: 0%; /* modifier */
+
+    position: absolute; /* absolute inherits the parent position, nav ul li a in this case DO NOT CHANGE or else it will explode */
+    bottom: 0; /* starts from bottom 0 absolute to the parent */
+    left: 10px; /* left 0 absolute to the parent. Ensures that animation starts in bottom left corner */
+}
+
+nav ul li a:hover {
+    color: white; /* color of text on hover. does not change for white/#333 */
+}
+
+nav ul li a:hover::after {
+    width: 25%;
+}
+
+.logo { /* logo */
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.logo img {
+    height: 75px;
+}

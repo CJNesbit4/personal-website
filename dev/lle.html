@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liquid-Liquid Equilibrium Image Transformer - Development - CJ Nesbit</title>
+    <link rel="stylesheet" href="devstyles.css">
+    <link rel="icon" href="../images/cjnesAILogo.png" type="image/x-icon">
+    <style>
+        .upload-area {
+            border: 3px solid #B2FFFF;
+            width: 60%;
+            margin: 0 auto;
+            border-radius: 15px;
+            padding: 40px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-bottom: 30px;
+        }
+        
+        .upload-area:hover {
+            background: #091B2C;
+            border-color: #09D8EB;
+        }
+        
+        .upload-area.dragover {
+            background: #091B2C;
+            border-color: #09D8EB;
+        }
+        
+        input[type="file"] {
+            display: none;
+        }
+
+        .upload-text {
+            color: #888;
+            font-size: 16px;
+        }
+        
+        .canvas-container {
+            display: flex;
+            gap: 50px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .canvas-wrapper {
+            min-width: 300px; 
+        }
+        
+        .canvas-wrapper h3 {
+            margin-bottom: 10px;
+            color: #888;
+            text-align: center;
+        }
+        
+        canvas {
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .button {
+            background: #09D8EB;
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 25px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: block;
+            margin: 0 auto;
+        }
+        
+        .button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        
+        .button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+        }
+        
+        .hidden {
+            display: none;
+        }
+
+        .example-box {
+            width: 50%;
+            margin: 40px auto;
+            border-radius: 10px;
+            overflow: hidden;
+            display: inline-block;
+            background-color: #000;
+        }
+
+        .example-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="../index.html" class="logo">
+            <img src="../images/cjnesAILogo.png" title="Return to Home" alt="AI generated CJ Nesbit Engineering themed logo">
+        </a>
+        <div class="head-text">You are currently on a module page. <span style="font-weight: 500;">Please make sure JavaScript is enabled on your browser.</span> Click "Return to Home" to return to the development lander.</div>
+        <div class="nav-items">
+            <ul>
+                <li><a href="index.html">Return to Home</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <h1 class="title">Liquid-Liquid Equilibrium Image Transformer</h1>
+
+    <h1 class="subtitle" style="font-weight: 1000;">Instructions for using the Liquid-Liquid Equilibrium Image Transformer:</h1>
+    <h1 class="subtitle"><span style="font-weight: 1000;">1. </span>Generate the Equilateral LLE curve in ChemCAD. Create a screenshot image of the diagram.</h1>
+    <h1 class="subtitle"><span style="font-weight: 1000;">2. </span>Crop the saved image so that the triangle points contact the sides of the image. See the example image at the bottom of this page if this is unclear.</h1>
+    <h1 class="subtitle"><span style="font-weight: 1000;">3. </span>Upload the cropped image to this page. If the preview is satisfactory, click "Download" to save the modified image.</h1>
+    <br><br><br>
+
+    <div class="upload-area" id="uploadArea">
+        <div class="upload-text">Click to upload or drag and drop the diagram.</div>
+        <input type="file" id="fileInput" accept="image/*">
+    </div>
+
+    <div class="canvas-container" id="canvasContainer">
+        <div class="canvas-wrapper">
+            <h3>Original Tertiary Diagram</h3>
+            <canvas id="originalCanvas"></canvas>
+        </div>
+        <div class="canvas-wrapper">
+            <h3>New Right-Angle Diagram</h3>
+            <canvas id="transformedCanvas"></canvas>
+        </div>
+    </div>
+
+    <button class="button" id="downloadBtn">Download New Diagram Image</button>
+
+    <br><br><br><br><br><div class="subtitle">Example Cropped Image from ChemCAD. The border of the crop touches all three corners of the original diagram. Try to crop as close to the diagram border as possible for the most accurate transformation!</div>
+    <div class="" style="display: flex; justify-content: center; align-items: center;">
+        <div class="example-box">
+            <img src="images/ExampleLLE.png">
+        </div>
+    </div>
+
+    <div class="subtitle">If you are having trouble operating the module, please check that you have JavaScript enabled on your browser. If you are still experiencing issues, please right-click, select "Inspect Element", navigate to the Console window, and e-mail CJ with the console error and your image.</div>
+    <br><br><br>
+
+    <script src="scripts/lle.js"></script>
+</body>
+</html>
