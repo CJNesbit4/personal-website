@@ -54,11 +54,13 @@ function interpolate() {
         y.value = calculatedY.toFixed(6);
         y.disabled = true;
         xInput.disabled = false;
+        return;
     } else if (yVal !== null) {
         const calculatedX = x1 + (yVal - y1) * (x2 - x1) / (y2 - y1);
         x.value = calculatedX.toFixed(6);
         x.disabled = true;
         y.disabled = false;
+        return;
     }
 }
 
@@ -72,4 +74,5 @@ function clear() {
     x.value = null;
     y.disabled = false;
     y.value = null;
+    return;
 }

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Linear Interpolator Single Variable - Development - CJ Nesbit</title>
+    <title>Linear Interpolator Two Variable - Development - CJ Nesbit</title>
     <link rel="stylesheet" href="devstyles.css">
     <link rel="icon" href="../images/cjnesAILogo.png" type="image/x-icon">
     <style>
@@ -32,7 +32,7 @@
             padding: 5px 10px;
         }
 
-        td:first-child {
+         td:first-child {
             width: 60px;
             color: #555;
             font-weight: 500;
@@ -89,12 +89,13 @@
         </div>
     </nav>
 
-    <h1 class="title">Linear Interpolator, Single Variable</h1>
+    <h1 class="title">Linear Interpolator, Two Variable</h1>
 
-    <h1 class="subtitle" style="font-weight: 1000;">Instructions for using the Linear Interpolator:</h1>
-    <h1 class="subtitle"><span style="font-weight: 1000;">1. </span>Enter the known variable pairs (both x & y) into the shaded boxes that surround the white box.</h1>
-    <h1 class="subtitle"><span style="font-weight: 1000;">2. </span>Enter the middle point desired coordinate (either x or y), and leave the unknown value blank to be interpolated.</h1>
-    <h1 class="subtitle"><span style="font-weight: 1000;">3. </span>Click interpolate. The given value should be within the range of the other variables if your input is valid.</h1>
+    <h1 class="subtitle" style="font-weight: 1000;">Instructions for using the Two Variable Linear Interpolator:</h1>
+    <h1 class="subtitle"><span style="font-weight: 1000;">1. </span>Enter the x & y (low to high x and y) bounds into the first gray box area.</h1>
+    <h1 class="subtitle"><span style="font-weight: 1000;">2. </span>Enter the known outputs f(low to high x, low to high y). There should be four pairs.</h1>
+    <h1 class="subtitle"><span style="font-weight: 1000;">3. </span>Enter all but one variable in the white box. Leave blank the variable you want to find.</h1>
+    <h1 class="subtitle"><span style="font-weight: 1000;">4. </span>Click interpolate. The given value should be within the range of the other variables if your input is valid.</h1>
     <br><br><br>
 
     <div class="wrapper">
@@ -107,6 +108,35 @@
                 <tr>
                     <td>y1</td>
                     <td><input type="number" id="y1" step="any" placeholder="y1"></td>
+                </tr>
+                <tr>
+                    <td>x2</td>
+                    <td><input type="number" id="x2" step="any" placeholder="x2"></td>
+                </tr>
+                <tr>
+                    <td>y2</td>
+                    <td><input type="number" id="y2" step="any" placeholder="y2"></td>
+                </tr>
+            </table>
+        </div>
+ 
+        <div class="sector">
+            <table>
+                <tr>
+                    <td>f(x1,y1)</td>
+                    <td><input type="number" id="f11" step="any" placeholder="f(x1,y1)"></td>
+                </tr>
+                <tr>
+                    <td>f(x1,y2)</td>
+                    <td><input type="number" id="f12" step="any" placeholder="f(x1,y2)"></td>
+                </tr>
+                <tr>
+                    <td>f(x2,y1)</td>
+                    <td><input type="number" id="f21" step="any" placeholder="f(x2,y1)"></td>
+                </tr>
+                <tr>
+                    <td>f(x2,y2)</td>
+                    <td><input type="number" id="f22" step="any" placeholder="f(x2,y2)"></td>
                 </tr>
             </table>
         </div>
@@ -121,18 +151,9 @@
                     <td>y</td>
                     <td><input type="number" id="y" step="any" placeholder="y"></td>
                 </tr>
-            </table>
-        </div>
-
-        <div class="sector">
-            <table>
                 <tr>
-                    <td>x2</td>
-                    <td><input type="number" id="x2" step="any" placeholder="x2"></td>
-                </tr>
-                <tr>
-                    <td>y2</td>
-                    <td><input type="number" id="y2" step="any" placeholder="y2"></td>
+                    <td>f(x,y)</td>
+                    <td><input type="number" id="f" step="any" placeholder="f(x,y)"></td>
                 </tr>
             </table>
         </div>
@@ -150,6 +171,6 @@
     <div class="subtitle">If you are having trouble operating the module, please check that you have JavaScript enabled on your browser. If you are still experiencing issues, please right-click, select "Inspect Element", navigate to the Console window, and e-mail CJ with the console error and a screenshot of your input.</div>
     <br><br><br>
 
-    <script src="scripts/interpolate.js"></script>
+    <script src="scripts/2dinterpolate.js"></script>
 </body>
 </html>
