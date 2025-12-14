@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linear Interpolator Single Variable - Development - CJ Nesbit</title>
+    <link rel="stylesheet" href="devstyles.css">
+    <link rel="icon" href="../images/cjnesAILogo.png" type="image/x-icon">
+    <style>
+        .wrapper {
+            background: #7FFFD4;
+            border-radius: 25px;
+            padding: 50px;
+            max-width: 480px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .sector {
+            margin-bottom: 25px;
+            padding: 20px;
+            background: #b5afaf;
+            border-radius: 10px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        td {
+            padding: 5px 10px;
+        }
+
+        td:first-child {
+            width: 60px;
+            color: #555;
+            font-weight: 500;
+            font-size: 14px;
+            text-align: right;
+            padding-right: 15px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 8px;
+            border: none;
+            background: #fff;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            box-shadow: 0 0 0 5px rgba(100, 150, 200, 0.25);
+        }
+
+        input:disabled {
+            background-color: #e9ecef;
+            color: #555;
+            cursor: not-allowed;
+        }
+
+        input[type=number]::-webkit-inner-spin-button,
+        input[type=number]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="../index.html" class="logo">
+            <img src="../images/cjnesAILogo.png" title="Return to Home" alt="AI generated CJ Nesbit Engineering themed logo">
+        </a>
+        <div class="head-text">You are currently on a module page. <span style="font-weight: 500;">Please make sure JavaScript is enabled on your browser.</span> Click "Return to Home" to return to the development lander.</div>
+        <div class="nav-items">
+            <ul>
+                <li><a href="index.html">Return to Home</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <h1 class="title">Linear Interpolator, Single Variable</h1>
+
+    <h1 class="subtitle" style="font-weight: 1000;">Instructions for using the Linear Interpolator:</h1>
+    <h1 class="subtitle"><span style="font-weight: 1000;">1. </span>Enter the known variable pairs (both x & y) into the shaded boxes that surround the white box.</h1>
+    <h1 class="subtitle"><span style="font-weight: 1000;">2. </span>Enter the middle point desired coordinate (either x or y), and leave the unknown value blank to be interpolated.</h1>
+    <h1 class="subtitle"><span style="font-weight: 1000;">3. </span>Click interpolate. The given value should be within the range of the other variables if your input is valid.</h1>
+    <br><br><br>
+
+    <div class="wrapper">
+        <div class="sector">
+            <table>
+                <tr>
+                    <td>x1</td>
+                    <td><input type="number" id="x1" step="any" placeholder="x1"></td>
+                </tr>
+                <tr>
+                    <td>y1</td>
+                    <td><input type="number" id="y1" step="any" placeholder="y1"></td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="sector" style="background-color: #f8f9f4;">
+            <table>
+                <tr>
+                    <td>x</td>
+                    <td><input type="number" id="x" step="any" placeholder="x"></td>
+                </tr>
+                <tr>
+                    <td>y</td>
+                    <td><input type="number" id="y" step="any" placeholder="y"></td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="sector">
+            <table>
+                <tr>
+                    <td>x2</td>
+                    <td><input type="number" id="x2" step="any" placeholder="x2"></td>
+                </tr>
+                <tr>
+                    <td>y2</td>
+                    <td><input type="number" id="y2" step="any" placeholder="y2"></td>
+                </tr>
+            </table>
+        </div>
+
+        <div style="text-align: center;">
+            <button id="interpolate">Interpolate</button>
+            <button id="clear">Clear</button>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="subtitle">If you are having trouble operating the module, please check that you have JavaScript enabled on your browser. If you are still experiencing issues, please right-click, select "Inspect Element", navigate to the Console window, and e-mail CJ with the console error and a screenshot of your input.</div>
+    <br><br><br>
+
+    <script src="scripts/interpolate.js"></script>
+</body>
+</html>
