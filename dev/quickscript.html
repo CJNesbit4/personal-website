@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickScript - Development - CJ Nesbit</title>
+    <link rel="stylesheet" href="devstyles.css">
+    <link rel="icon" href="../images/cjnesAILogo.png" type="image/x-icon">
+    <style>
+        .lb {
+            margin-top: 10px;
+        }
+
+        .menu {
+            width: 480px;
+            padding: 10px;
+            border: 1px solid #f9f9f9;
+            border-radius: 2px;
+            background-color: #ccc;
+            box-shadow: 0px 4px 4px rgba(0,0,0,0.1);
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: black;
+            margin-bottom: 24px;
+            font-size: 32px;
+        }
+
+        .selector {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            margin-bottom: 24px;
+        }
+
+        .choice {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+        }
+
+        .choice input[type="radio"] {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+        }
+
+        .choice label {
+            font-size: 14px;
+            color: #444;
+        }
+
+        .boxes {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-bottom: 18px;
+        }
+
+        .box {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .box-name {
+            font-weight: 500;
+            color: #555;
+            margin-bottom: 8px;
+            font-size: 14px;
+            
+        }
+
+        textarea {
+            resize: none;
+            width: 100%;
+            min-height: 80px;
+            overflow-y: auto;
+        }
+
+        .copy {
+            color: black;
+            border: none;
+            padding: 16px 32px;
+            font-size: 16px;
+            font-weight: 500;
+            border-radius: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            box-shadow: 0 0 0 2px black;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="../index.html" class="logo">
+            <img src="../images/cjnesAILogo.png" title="Return to Home" alt="AI generated CJ Nesbit Engineering themed logo">
+        </a>
+        <div class="head-text">You are currently on a module page. <span style="font-weight: 500;">Please make sure JavaScript is enabled on your browser.</span> Click "Return to Home" to return to the development lander.</div>
+        <div class="nav-items">
+            <ul>
+                <li><a href="index.html">Return to Home</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <h1 class="title">QuickScript</h1>
+
+    <h1 class="subtitle">Click <span style="font-weight: 1000; color: white;">HERE</span> to download the unpacked extension release.</h1>
+
+    <h1 class="subtitle" style="font-weight: 1000;">Instructions for using QuickScript module/downloading the extension:</h1>
+    <h1 class="subtitle"><span style="font-weight: 1000;">If downloading: </span><a href="https://letmegooglethat.com/?q=load+unpacked+extension" style="color: white;" target="_blank">Follow these instructions</a>.</h1>
+    <h1 class="subtitle">Otherwise, input your text into the input box. The output box will automatically generate based on the selected mode.</h1>
+
+    <div style="text-align: center">
+    <div class="menu">
+      <div class="selector">
+        <div class="choice">
+          <input type="radio" id="superscript" name="mode" value="superscript" checked>
+          <label for="superscript">Superscript</label>
+        </div>
+        <div class="choice">
+          <input type="radio" id="subscript" name="mode" value="subscript">
+          <label for="subscript">Subscript</label>
+        </div>
+      </div>
+
+      <section class="boxes">
+        <div class="box">
+          <div class="box-name">Input Text</div>
+          <textarea id="input" placeholder="Input text goes here"></textarea>
+        </div>
+
+        <div class="box">
+          <div class="box-name">Output</div>
+          <textarea id="output" readonly></textarea>
+        </div>
+
+      </section>
+
+      <div style="text-align: center">
+        <button class="copy" id="copy">Copy</button>
+      </div>
+    </div>
+    </div>
+
+    <br><br><br>
+    <div class="subtitle">If you are having trouble operating the module, please check that you have JavaScript enabled on your browser. If you are still experiencing issues, please right-click, select "Inspect Element", navigate to the Console window, and e-mail CJ with the console error and a screenshot of your input.</div>
+    <br><br><br>
+
+    <script src="scripts/quickscript.js"></script>
+</body>
+</html>
