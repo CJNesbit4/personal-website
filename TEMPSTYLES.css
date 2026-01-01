@@ -1,0 +1,666 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, BlinkMacSystemFont;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: fit-content;
+}
+
+.header-container { /*Container of header section */
+    width: 100%;
+    height: auto;
+    background-color: #333;
+    align-items: center; /* centered VERTICALLY */
+    padding: 10px 0;
+    position: relative;
+    z-index: 21;
+    position: sticky; top: 0; /* sticky header */
+    min-height: 2000000000px; /* ensures stickiness lol */
+}
+
+
+.head-text {
+    color: white;
+    text-align: top;
+}
+
+nav { /* navigation bar */
+    width: 100%;
+    height: 100px;
+    background: #1a1003;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    position: sticky; top: 0;
+    z-index: 20;
+    overflow: hidden;
+}
+
+nav ul { /* unordered list class for the options */
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+nav ul li { /* nav -> unordered list class -> list item class */
+    margin-right: 20px; /* Margin right from eachother */
+}
+
+nav ul li a { /* nav -> unordered list class -> list item class -> a class */
+    position: relative;
+    text-decoration: none;
+    color: rgb(255, 255, 255); /* text color */
+    font-size: 18px; /* text font size (duh) */
+    padding: 10px; /* padding on ALL direction */
+    display: inline-block;
+    transition: color 0.3s ease, border-bottom 0.3s ease; /* transition underline duration */
+}
+
+nav ul li a::after {
+    content: ""; /* empty class */
+    background-color:#ff0000; /* color of underline */
+    transition: width 0.3s ease; /* span of transition (width) */
+    height: 4px; /* height of underline */
+    width: 0%; /* modifier */
+
+    position: absolute; /* absolute inherits the parent position, nav ul li a in this case DO NOT CHANGE or else it will explode */
+    bottom: 0; /* starts from bottom 0 absolute to the parent */
+    left: 10px; /* left 0 absolute to the parent. Ensures that animation starts in bottom left corner */
+}
+
+nav ul li a:hover {
+    color: white; /* color of text on hover. does not change for white/#333 */
+}
+
+nav ul li a:hover::after {
+    width: 25%;
+}
+
+.logo { /* logo */
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.logo img {
+    height: 75px;
+}
+
+
+
+.hero {
+    background: #2a2c2e;
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.hero-image {
+    flex: 0 0 30%;
+    height: 100%;
+    background: url(images/cjnesbitprofessional.png) no-repeat center center/cover;
+    background-size: cover;
+    background-position: center 20%;
+    /*test*/
+}
+
+.hero-temp {
+    width: 70%;
+    padding: 2% 2.8%;
+}
+
+.hero-temp h1 {
+    display: none;
+}
+
+.hero-temp h2 {
+    display: none;
+}
+
+.hero-box {
+    background: rgba(255, 255, 255, 0.85);
+    box-shadow: 0px 16px 36px rgba(0, 0, 0, 0.95);
+    border-radius: 24px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 100%;
+}
+
+.hero-text {
+    color: black;
+    padding: 32px;
+    text-align: left;
+}
+
+.hero-text h1 {
+    display: contents;
+    font-size: 4rem;
+}
+
+.hero-text h2 {
+    display: contents;
+    font-size: 3rem;
+    padding: 20px;
+    font-style: oblique;
+    padding-bottom: 60px;
+}
+
+.hero-text p {
+    font-size: 24px;
+}
+
+.hero-text p a {
+    color: red;
+    text-decoration: wavy;
+    transition: 0.3s ease;
+}
+
+.hero-text p a:hover {
+    color:black;
+    text-decoration: underline;
+}
+
+.black-bar { 
+    width: 100%;
+    height: 20px;
+    background-color: black;
+}
+
+.preview {
+    background: #ffffff;
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    align-items: top;
+    position: relative;
+    justify-content: center;
+    padding: 4% 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.preview-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+    filter: brightness(1.5);
+}
+
+.preview-box {
+    background: rgba(255, 255, 255, 0.85); 
+    border-radius: 10px;
+    padding: 20px;
+    z-index: 2;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.85); 
+    width: 60%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+}
+
+.preview-text h2 {
+    margin: 0;
+    font-size: clamp(0.2rem, 4vw, 4rem);
+    font-weight: bold;
+    color: #333;
+}
+
+.preview-text p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: clamp(0.2rem, 3vw, 2.0rem);
+    color: #444;
+}
+
+.preview a {
+    background: #09D8EB;
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 25px;
+    font-size: 32px;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: inline-block;
+    margin: 0 auto;
+    text-decoration: none;
+}
+
+.preview a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.intro {
+    background: #ffffff;
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    align-items: top;
+    position: relative;
+    justify-content: center;
+    padding: 4% 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.intro-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+    filter: brightness(1.5);
+}
+
+.intro-box {
+    background: rgba(255, 255, 255, 0.85); 
+    border-radius: 10px;
+    padding: 20px;
+    z-index: 2;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.85); 
+    width: 70%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+}
+
+.intro-text h2 {
+    margin: 0;
+    font-size: clamp(0.2rem, 4vw, 4rem);
+    font-weight: bold;
+    color: #333;
+}
+  
+.intro-text p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: clamp(0.2rem, 3vw, 1.0rem);
+    color: #444;
+}
+
+.intro-text p2 {
+    font-size: clamp(0.1rem, 3vw, 1.0rem);
+    color: #555;
+}
+
+.intro-text p2 a {
+    color: red;
+    text-decoration: wavy;
+    transition: 0.3s ease;
+}
+
+.intro-text p2 a:hover {
+    color:black;
+    text-decoration: underline;
+}
+
+
+.showcase {
+    background: #1a2120;
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.showcase-title {
+    background: #1a2120;
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: clamp(0.4rem, 5vw, 2rem);
+    color: #c1c1c1;
+}
+
+.showcase-image { /* showcase element image wrapper*/
+    flex: 0 0 50%;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    padding: 36vh;
+    z-index: 2;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.85); 
+    text-align: center;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+ .showcase-image video {
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+ }
+
+.showcase-text { /* text element */
+    flex: 0 0 50%;
+    padding: 20px;  
+    overflow: hidden;
+}
+
+.showcase-text h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #999; 
+}
+
+.showcase-text h2 { /* location employer */
+    font-size: 0.8rem;
+    color: #555;
+}
+
+.showcase-text h3 { /* duration */
+    font-size: 0.7rem;
+    color: #555;
+}
+
+.showcase-text p {
+    font-size: 1.2rem;
+    color: #777;
+}
+
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+.footer-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.footer-logo img {
+    max-height: 50px; /* affects scaling of picture, do not touch unless adjusting flex */
+    width: auto;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color:rgb(134, 62, 2);
+}
+
+.footer-contact {
+    padding: 20px;
+    color:#fff;
+    text-decoration: none;
+    font-size: 22px;
+}
+
+/* DESKTOP CODE ^
+*
+MOBILE MEDIA QUERY V*/
+
+@media (max-width: 600px) {
+    .head-text {
+        display: none;
+    }
+
+    .logo img {
+        height: 4vh;
+    }
+    
+    nav {
+        justify-content: space-between;
+        align-items: center;
+        line-height: 0.2;
+    }
+
+    .nav-items {
+        width: 100%;
+        background-color: #1a1003;
+        text-align: center;
+    }
+
+    nav ul li a {
+        font-size: 8px;
+    }
+
+    .hero {
+        flex-direction: column;
+        height: 100vh;
+    }
+
+    .hero-image {
+        display: none;
+    }
+
+    .hero-temp {
+        width: 100%;
+        padding: 10px;
+        align-items: center;
+    }
+
+    .hero-temp h1 {
+        text-align: center;
+        color: white;
+        display: contents;
+    }
+
+    .hero-text h1 {
+        font-size: 24px;
+    }
+
+    .hero-text h2 {
+        font-size: 16px;
+        padding-bottom: 16px;
+        padding: 16px;
+    }
+
+    .hero-text p {
+        font-size: 10px;
+        margin-bottom: 0px;
+    }
+
+    .intro {
+        padding: 2% 0;
+        height: 65vh;
+    }
+
+    .intro-box {
+        padding: 8px;
+        width: 90%;
+    }
+
+    .intro-text p2 {
+        font-size: 9px;
+    }
+
+    .showcase {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .showcase-image {
+        display: none;
+    }
+
+    .showcase-text {
+        flex: 0 0 100%;
+        width: 100%;
+    }
+
+    .footer {
+        width: 100%;
+    }
+
+    .footer-logo img {
+        max-height: 4vh;
+    }
+}
+
+@media (min-width: 4000px) {
+    .hero-temp h2 {
+        display: contents;
+        font-size: 128px;
+        color: white;
+    }
+
+    .hero-text h2 {
+        display: contents;
+        font-size: 3rem;
+        padding: 20px;
+        font-style: oblique;
+        padding-bottom: 60px;
+        color: black;
+    }
+}
+
+@media (max-width: 1878px) {
+    .hero-text p {
+        font-size: 18px;
+    }
+}
+
+/*125*/
+@media (max-width: 1600px) {
+    nav ul li a {
+        font-size: 16px;
+    }
+
+    .hero-text h1 {
+        font-size: 3rem;
+    }
+
+    .hero-text h2 {
+        font-size: 2.5rem;
+        padding-bottom: 40px;
+    }
+
+    .hero-text p {
+        font-size: 14px;
+    }
+
+    .showcase-text p {
+        font-size: 1rem;
+    }
+}
+
+/*150*/
+@media (max-width: 1400px) {
+    nav ul li a {
+        font-size: 14px;
+    }
+    
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-text h2 {
+        font-size: 2rem;
+        padding-bottom: 30px;
+    }
+
+    .hero-text p {
+        font-size: 16px;
+        line-height: 1.0;
+    }
+
+    .intro-text p {
+        margin-bottom: 0px;
+        margin: 0px;
+    }
+
+    .intro-text p2 {
+        font-size: 0.5rem;
+    }
+
+    .showcase-text h1 {
+        font-size: 2.5rem;
+    }
+
+    .showcase-text p {
+        font-size: 0.8rem;
+    }
+}
+
+/*175*/
+@media (max-width: 1080px) {
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+
+    .hero-text h2 {
+        font-size: 1.5rem;
+        padding: 10px;
+        padding-bottom: 15px;
+    }
+
+    .hero-text p {
+        font-size: 16px;
+        line-height: 1.0;
+    }
+}
+
+/*250*/
+@media (max-width: 768px) {
+    .head-text {
+        display: none;
+    }
+
+    .hero-text h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero-text h2 {
+        font-size: 1rem;
+        padding: 10px;
+        padding-bottom: 10px;
+    }
+
+    .hero-text p {
+        font-size: 8px;
+        line-height: 1.0;
+    }
+}
