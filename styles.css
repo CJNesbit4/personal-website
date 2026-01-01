@@ -115,6 +115,7 @@ nav ul li a:hover::after {
     background: url(images/cjnesbitprofessional.png) no-repeat center center/cover;
     background-size: cover;
     background-position: center 20%;
+    /*test*/
 }
 
 .hero-temp {
