@@ -98,11 +98,11 @@ nav ul li a:hover::after {
 
 
 .hero {
-    background: #1a2120;
+    background: #2a2c2e;
     width: 100%;
-    height: 100vh;
+    height: 40vh;
     display: flex;
-    align-items: top;
+    align-items: center;
     justify-content: center;
     position: relative;
     overflow: hidden;
@@ -110,16 +110,15 @@ nav ul li a:hover::after {
 }
 
 .hero-image {
-    flex: 0 0 50%;
-    position: relative;
+    flex: 0 0 30%;
     height: 100%;
     background: url(images/cjnesbitprofessional.png) no-repeat center center/cover;
     background-size: cover;
-    background-position: center 30%;
+    background-position: center 20%;
 }
 
 .hero-temp {
-    width: 50%;
+    width: 70%;
     padding: 2% 2.8%;
 }
 
@@ -133,7 +132,7 @@ nav ul li a:hover::after {
 
 .hero-box {
     background: rgba(255, 255, 255, 0.85);
-    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.85);
+    box-shadow: 0px 16px 36px rgba(0, 0, 0, 0.95);
     border-radius: 24px;
     width: 100%;
     display: flex;
@@ -144,8 +143,8 @@ nav ul li a:hover::after {
 
 .hero-text {
     color: black;
-    padding: 16px;
-    text-align: center;
+    padding: 32px;
+    text-align: left;
 }
 
 .hero-text h1 {
@@ -174,6 +173,85 @@ nav ul li a:hover::after {
 .hero-text p a:hover {
     color:black;
     text-decoration: underline;
+}
+
+.black-bar { 
+    width: 100%;
+    height: 20px;
+    background-color: black;
+}
+
+.preview {
+    background: #ffffff;
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    align-items: top;
+    position: relative;
+    justify-content: center;
+    padding: 4% 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.preview-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+    filter: brightness(1.5);
+}
+
+.preview-box {
+    background: rgba(255, 255, 255, 0.85); 
+    border-radius: 10px;
+    padding: 20px;
+    z-index: 2;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.85); 
+    width: 60%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+}
+
+.preview-text h2 {
+    margin: 0;
+    font-size: clamp(0.2rem, 4vw, 4rem);
+    font-weight: bold;
+    color: #333;
+}
+
+.preview-text p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: clamp(0.2rem, 3vw, 2.0rem);
+    color: #444;
+}
+
+.preview a {
+    background: #09D8EB;
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 25px;
+    font-size: 32px;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: inline-block;
+    margin: 0 auto;
+    text-decoration: none;
+}
+
+.preview a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
 
 .intro {
