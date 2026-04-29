@@ -844,3 +844,8 @@ nav ul li a:hover::after {
         margin: 0;
     }
 }
+
+.spanner {
+    font-weight: bold;
+    color: white;
+}
