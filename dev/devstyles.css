@@ -10,6 +10,10 @@ body, html {
     background-color: #0B2031;
 }
 
+body::-webkit-scrollbar {
+    display: none;
+}
+
 .title {
     color: #ACE5FF;
     text-align: center;

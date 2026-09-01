@@ -10,7 +10,11 @@ body, html {
     padding: 0;
     width: 100%;
     height: fit-content;
-    min-width: 320px; /* prevents content from collapsing below a sensible floor when zoomed */
+    min-width: 320px;
+}
+
+body::-webkit-scrollbar {
+    display: none;
 }
 
 .head-text {
